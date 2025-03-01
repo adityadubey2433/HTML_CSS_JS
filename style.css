@@ -1,0 +1,142 @@
+/* Global styles for all elements */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  color: rgb(19, 18, 18);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* Header styling */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  padding: 0 7vw;
+  background-color: rgb(232, 232, 212);
+  border-bottom: 2px solid rgb(113, 113, 73);
+  box-shadow: 0 3px 10px rgb(45, 45, 26);
+}
+
+/* Navigation menu (links) */
+.header .nav ul {
+  display: flex;
+  align-items: center;
+}
+
+.header .nav ul li {
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+/* Hover effect for nav items */
+.header .nav ul li:hover {
+  color: brown;
+}
+
+/* Account section (icons) */
+.account {
+  flex: 0.1;
+}
+
+.account ul {
+  display: flex;
+  align-items: center;
+}
+
+.account ul li {
+  padding: 15px;
+  font-size: 15px;
+}
+
+.account ul li:hover {
+  cursor: pointer;
+}
+
+/* Search section */
+.search {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.search input {
+  width: 200px;
+  outline: none;
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+
+.searchicon {
+  background-color: aqua;
+  display: block;
+  padding: 4px 5px;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+/* Hamburger icon */
+.bar {
+  display: none;
+}
+
+/* Icon hover effect */
+.bar i:hover {
+  color: aquamarine;
+}
+
+/* Styling for the logo image */
+header img {
+  max-height: 50px;
+  max-width: 100%;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+  .header {
+      padding: 0 10px;
+  }
+
+  /* Hamburger icon appears on smaller screens */
+  .bar {
+      display: block;
+  }
+
+  /* Hide navigation menu by default on small screens */
+  .nav {
+      display: none;
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: rgb(232, 232, 212);
+      padding: 10px;
+      box-shadow: 0 3px 10px rgb(45, 45, 26);
+  }
+
+  .nav ul {
+      flex-direction: column;
+      width: 100%;
+  }
+
+  .nav ul li {
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+  }
+
+  /* Show navigation menu when it is toggled */
+  .nav.active {
+      display: block;
+  }
+
+  /* Adjust the search input width */
+  .search input {
+      width: 150px;
+  }
+}
